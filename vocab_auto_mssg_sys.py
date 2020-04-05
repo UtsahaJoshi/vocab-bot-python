@@ -16,19 +16,19 @@ while True:
         def onMessage(self, message_object=None, **kwargs):
             if (message_object.text == vocab_answer):
                 client.send(fbchat.models.Message("Correct Answer"), uid)
-                if (client.searchForUsers("khateewooda.showvet")[0].uid == message_object.author):
+                if (client.searchForUsers("user_fb_custom_url")[0].uid == message_object.author):
                     client.stopListening()
             else:
                 client.send(fbchat.models.Message("No! The answer is " + vocab_answer), uid)
                 print(message_object)
-                if (client.searchForUsers("khateewooda.showvet")[0].uid == message_object.author):
+                if (client.searchForUsers("user_fb_custom_url")[0].uid == message_object.author):
                     client.stopListening()
             print(message_object.text)
             print(vocab_answer)
 
 
-    client = CustomClient("utsaha.joshi.7", "bpdn11dspy", vocab_answer)
-    friend = client.searchForUsers("khateewooda.showvet")
+    client = CustomClient("your_fb_custom_url", "password", vocab_answer)
+    friend = client.searchForUsers("user_fb_custom_url")
     uid = friend[0].uid
     client.send(fbchat.models.Message("What is the meaning of " + vocab_question+"?"), uid)
     client.listen()
