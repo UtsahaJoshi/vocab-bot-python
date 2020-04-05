@@ -7,6 +7,7 @@ The python libraries used in this script are:
   - random
   
 # How to run
+
   1. Clone the repository
   2. pip install fbchat
   3. pip install pandas
@@ -14,6 +15,13 @@ The python libraries used in this script are:
   5. Replace "password" with the valid password of your account.
   6. Replace "user_fb_custom_url" with a valid custom URL name of a user. *important: The custom URL name must be of a user from the friend's list.
   7. Run the script.
- 
+  
+# Contribution
+
+Anyone is allowed to make contributions to this script. 
+
+# License
+
+To the extent possible under law, the author has waived all copyrights and related or neighboring rights to this work.
   
  
